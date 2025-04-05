@@ -7,7 +7,6 @@ if ($_SESSION['role'] != 'manager') {
 
 include('includes/db.php');
 
-// Handle delete member request
 if (isset($_POST['delete_member'])) {
     $member_id = $_POST['member_id'];
     $delete_query = "DELETE FROM members WHERE id = $member_id";

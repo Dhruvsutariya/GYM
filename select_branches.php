@@ -6,7 +6,6 @@ if ($_SESSION['role'] != 'owner') {
 }
 include('includes/db.php');
 
-// Handle delete request
 if (isset($_POST['delete_branch'])) {
     $branch_id = $_POST['branch_id'];
     $stmt = $conn->prepare("DELETE FROM branches WHERE id = ?");

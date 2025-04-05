@@ -6,7 +6,6 @@ if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Check if username already exists
     $check = $conn->query("SELECT * FROM users WHERE username='$username'");
     if ($check->num_rows > 0) {
         $error = "Username already exists!";
